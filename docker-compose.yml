@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  moviebox:
+    image: tbslantian/moviebox:latest
+    container_name: moviebox
+    restart: always
+    # 端口映射: 左边是你访问的端口(可修改)，右边 9850 请勿修改
+    ports:
+      - "9850:9850"
+    volumes:
+      # 数据持久化 (数据库/日志)
+      - ./data:/config
+    environment:
+      # --- 授权配置 (必填) ---
+      - MB_LICENSE_KEY=你的授权码
+
+      # --- 基础配置 ---
+      - TZ=Asia/Shanghai
+      
+      # --- TMDB 配置 ---
+      - CFG_API_KEY=你的TMDB_API_KEY
+      
+      # --- Telegram 通知 (选填) ---
+      - CFG_TG_TOKEN=          #TG BOT TOKEN
+      - CFG_TG_CHAT_ID=        #Telegram Chat ID
+      
+      # --- MoviePilot 配置 (用于自动推送) ---
+      - CFG_MP_URL=http://x.x.x.x:3001  #MP 公网/内网 3001地址
+      - CFG_MP_USER=admin               #MP 账号
+      - CFG_MP_PWD=password             #MP密码
+      
+      # --- Emby 配置 (用于库存检测与图片展示) ---
+      - CFG_EMBY_URL=http://192.168.1.x:8096        #EMBY公网/内网地址
+      - CFG_EMBY_KEY=你的EmbyApiKey                 
