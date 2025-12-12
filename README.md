@@ -50,7 +50,7 @@
 | 审核工单 | 个人报告 |
 | :---: | :---: |
 | ![审核工单](mobile.png) | ![报告截图](report.png) |
-| ![审核工单](tg.png) |
+| ![TG审核推送](tg.png) | ![搜索截图](search.png) |
 
 
 
@@ -76,8 +76,6 @@ services:
     volumes:
       # 数据持久化
       - ./data:/opt/moviebox/data
-      # ⚠️ 群晖/Linux 用户必选：挂载机器码用于授权
-      - /etc/machine-id:/etc/machine-id:ro
     environment:
       # --- 授权配置 (必填) ---
       - MB_LICENSE_KEY=你的授权码
@@ -89,9 +87,9 @@ services:
       - CFG_API_KEY=你的TMDB_API_KEY
       
       # --- MoviePilot 配置 (自动化订阅) ---
-      - CFG_MP_URL=http://192.168.1.x:3000
-      - CFG_MP_USER=admin
-      - CFG_MP_PWD=password
+      - CFG_MP_URL=http://192.168.1.x:3001
+      - CFG_MP_USER=
+      - CFG_MP_PWD=
       
       # --- Emby 配置 (库存检测) ---
       - CFG_EMBY_URL=http://192.168.1.x:8096
@@ -103,10 +101,10 @@ docker-compose up -d
 变量名	必填	说明
 MB_LICENSE_KEY	✅	从管理员处获取的商业授权码
 CFG_API_KEY	✅	TMDB API Key，用于获取元数据
-CFG_MP_URL	✅	MoviePilot 地址 (例如 http://10.0.0.1:3000)
+CFG_MP_URL	✅	MoviePilot 地址 (例如 http://公网/内网+3001端口) (不带结尾斜杠)
 CFG_MP_USER	✅	MoviePilot 登录用户名
 CFG_MP_PWD	✅	MoviePilot 登录密码
-CFG_EMBY_URL	✅	Emby 服务器地址 (不带结尾斜杠)
+CFG_EMBY_URL	✅	Emby 服务器地址 公网/内网+8096端口)(不带结尾斜杠)
 CFG_EMBY_KEY	✅	Emby API Key
 
 📜 免责声明
@@ -114,6 +112,7 @@ CFG_EMBY_KEY	✅	Emby API Key
 请勿用于非法用途。
 所有影片元数据均来自 TMDB，本项目不存储任何视听文件。
 Copyright © 2025 tbslantian. All Rights Reserved.
+
 
 
 
