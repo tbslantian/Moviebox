@@ -45,13 +45,17 @@
 
 | 发现首页 (Hero UI) | 详情页 (Emby状态) |
 | :---: | :---: |
-| ![首页截图](https://via.placeholder.com/400x250?text=Home+Page) | ![详情截图](https://via.placeholder.com/400x250?text=Detail+Modal) |
+| ![首页截图](home.png) | ![详情截图](detail.png) |
 
-| 移动端适配 | 个人报告 |
+| 审核工单 | 个人报告 |
 | :---: | :---: |
-| ![手机截图](https://via.placeholder.com/400x250?text=Mobile+View) | ![报告截图](https://via.placeholder.com/400x250?text=User+Report) |
+| ![审核工单](mobile.png) | ![报告截图](report.png) |
 
-> *请将上述图片链接替换为您实际的截图链接*
+| TG BOT 推送 
+| :---: | :---: |
+| ![审核工单](tg.png) |
+
+
 
 ---
 
@@ -113,3 +117,4 @@ CFG_EMBY_KEY	✅	Emby API Key
 请勿用于非法用途。
 所有影片元数据均来自 TMDB，本项目不存储任何视听文件。
 Copyright © 2025 tbslantian. All Rights Reserved.
+
