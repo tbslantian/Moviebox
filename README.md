@@ -50,9 +50,6 @@
 | 审核工单 | 个人报告 |
 | :---: | :---: |
 | ![审核工单](mobile.png) | ![报告截图](report.png) |
-
-| TG BOT 推送 | 
-| :---: | :---: |
 | ![审核工单](tg.png) |
 
 
@@ -117,5 +114,6 @@ CFG_EMBY_KEY	✅	Emby API Key
 请勿用于非法用途。
 所有影片元数据均来自 TMDB，本项目不存储任何视听文件。
 Copyright © 2025 tbslantian. All Rights Reserved.
+
 
 
