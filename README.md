@@ -39,6 +39,8 @@
 - 📊 **个人观影报告**  
   基于 Emby 用户数据，生成个人观影统计与最近播放记录。
 
+
+- 🔐 一杯咖啡钱解锁永久授权 私聊@hdhive_Support_bot 频道t.me/tbslantian_hdhive_bot
 ---
 
 ## 📸 界面预览
@@ -112,6 +114,7 @@ CFG_EMBY_KEY	✅	Emby API Key
 请勿用于非法用途。
 所有影片元数据均来自 TMDB，本项目不存储任何视听文件。
 Copyright © 2025 tbslantian. All Rights Reserved.
+
 
 
 
